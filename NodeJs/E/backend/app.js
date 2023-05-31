@@ -84,7 +84,7 @@ app.delete('/goals/:id', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://172.19.0.2:27017/course-goals',
+  'mongodb://localhost:27017/course-goals',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -95,7 +95,7 @@ mongoose.connect(
       console.error(err);
     } else {
       console.log('CONNECTED TO MONGODB');
-      app.listen(80);
+      app.listen(8085);
     }
   }
 );
